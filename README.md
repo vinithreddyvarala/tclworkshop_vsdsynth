@@ -21,3 +21,8 @@ Written shell script that expects csv file as the input and passes it to the tcl
 + When the user asks for help .The following data is displayed.
 
 ![help](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/78439e0f-7c88-4837-98bd-ac7de11b0dcd)
+
+## DAY2
+
++ Auto Created the variable names and assigned the respective paths and files to the variables using matrix and arrays from the csv file.
+  
