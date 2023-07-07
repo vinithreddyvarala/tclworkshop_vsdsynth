@@ -48,5 +48,29 @@ Clock constraints, input and output constraints from the Constraint file convert
 
 + Extracted the column numbers of frequency, duty cycle, early rise & fall delay, late rise & fall delay, early rise & fall slew and late rise & fall slew of the clock for adding clock latency and clock slew constraints into the SDC format file.
 
+![clock constraints](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/1de8f922-460b-4ce8-bf0c-28507a6999d0)
+
+
++ Generated SDC format file with clock latency and clock slew constraints.
+  
+![clock latency and slew constraints in sdc](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/329af6bf-65a5-4e98-a889-5e06fd839a92)
+
+
+#### INPUT CONSTRAINTS
+
++ Categorized input ports as bits and buses using NetlistDirectory. Input port is searched in the Verilog files present in NetlistDirectory. Splitted the line with ; delimiter. Multi-space is made into a single space using regular expressions, duplications are removed and added into a temporary file.
+  
+![differentiating bus and bit](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/bc9127ac-3e44-4647-b0ee-062a01567362)
+
+
++ The count variable stores the count of words in the file. If the count value exceeds 2, the input port is a bus else a bit.
+  
+![bit and bus](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/a336cb25-da9d-4f19-8e4d-f7f5b4e808e2)
+
+
++ Added input constraints into the SDC file. The input port which is a bus has * with the port name.
+
+![sdc format for input bit and bus](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/ff7bf46e-0b9c-45a5-89ba-8f463ea7c509)
+
   
 
