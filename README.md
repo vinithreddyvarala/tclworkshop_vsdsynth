@@ -72,5 +72,12 @@ Clock constraints, input and output constraints from the Constraint file convert
 
 ![sdc format for input bit and bus](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/ff7bf46e-0b9c-45a5-89ba-8f463ea7c509)
 
-  
+
+  #### OUTPUT CONSTRAINTS
+
++ Categorized output ports as bits and buses using NetlistDirectory. Output port is searched in the Verilog files present in NetlistDirectory. Splitted the line with; delimiter. Multi-space is made into a single space using regular expressions, duplications are removed and added into a temporary file. The count variable stores the count of words in the file. If the count value exceeds 2, the input port is a bus else a bit.
+
++ Added output constraints into the SDC file. The output port which is a bus has * with the port name.
+ 
+
 
