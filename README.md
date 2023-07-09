@@ -85,7 +85,9 @@ Clock constraints, input and output constraints from the Constraint file convert
 ![sdc output constraints](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/bdacd335-e9fc-4e44-831e-2944fe29c0f4)
 
 
-## HIERARCHY CHECK 
+## DAY4
+
+#### HIERARCHY CHECK 
 
 + Created .ys file which checks the hierarchy of the entire design.
 
