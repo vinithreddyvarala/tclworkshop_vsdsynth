@@ -84,6 +84,44 @@ Clock constraints, input and output constraints from the Constraint file convert
 
 ![sdc output constraints](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/bdacd335-e9fc-4e44-831e-2944fe29c0f4)
 
+
+## HIERARCHY CHECK 
+
++ Created .ys file which checks the hierarchy of the entire design.
+
+![yosys file for hierarchy](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/efc963b8-6f08-4952-84c9-06c9078f36fc)
+
+
++ The .ys file is passed to the `YOSYS` tool and generates a log file associated with it. Since all .v files exist in the top module no errors are found.
+
+![hierarchy check pass updated](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/ff21c0e0-7c47-403a-a480-689b0d2c4fe6)
+
+
++ Modified one of the .v file names in the top module to check the script's functionality. The following output is displayed i.e. error occurs.
+
+![hierarchy failed check updated](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/8cc307d2-1373-49bf-888e-c411d449d2c3)
+
+
++ The log file contains the error as follows
+
+![log file showing errror](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/8c81e9ea-f2f1-496c-b29a-981b1afe90ab)
+
+
+#### MAIN SYNTHESIS 
+
++ Created final .ys file for synthesis and passed to the `YOSYS` tool and generated synth.v file.
+  
+![synth pass](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/ba7e74bc-1797-40e5-ab73-e47ce8aa1672)
+
+
++ Modified one of the .v file names in the top module to check the script's functionality. The following output is displayed i.e. error occurs
+
+![synthesis failed](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/d6f89417-6708-4a18-8c3c-36cbdbe5fc0f)
+
+
++ 
+
+
  
 
 
