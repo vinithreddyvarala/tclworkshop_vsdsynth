@@ -6,6 +6,17 @@ __*Author: Varala Vinith Reddy*__
 
 In the VLSI industry, TCL (Tool Command Language) is widely used for scripting and automation in electronic design automation (EDA) tasks. It is used for tasks such as automating design setup, simulation, synthesis, timing analysis, and verification. TCL is also used to define design constraints, integrate different EDA tools, write testbenches, perform chip testing, and customize and extend tool functionality. Overall, TCL plays a critical role in streamlining the design flow and improving productivity in the VLSI industry.
 
+## OVERVIEW OF THE PROJECT
++ Input file is .csv file that contains the following details namely Design name, paths for the library, netlist used, and output generated.
++ Converted constraints file into sdc format file differentiating bit and a bus by "*".
++ Created .ys file and passed it to the `Yosys` tool and generated the synthesis.v file
++ Processed the synthesis.v file and generated synthesis.final.v file
++ Converted sdc format file into the corresponding .timing file
++ Created .config file and passed it to the `OpenTimer` tool and generated .results file
++ Extracted the desired contents from the .results file
++ Tabulated the contents in the format specified.
+   
+
 ## DAY1
 
 Written shell script that expects csv file as the input and passes it to the tcl box to do the further action.
