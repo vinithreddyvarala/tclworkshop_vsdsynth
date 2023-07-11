@@ -1,10 +1,10 @@
 # tclworkshop_vsdsynth
-# TCL WORKSHOP
+# TCL WORKSHOP: From Introduction to Advanced Scripting Techniques in VLSI Design
 __*Author: Varala Vinith Reddy*__
 
 ## INTRODUCTION
 
-In the VLSI industry, TCL (Tool Command Language) is widely used for scripting and automation in electronic design automation (EDA) tasks. It is used for tasks such as automating design setup, simulation, synthesis, timing analysis, and verification. TCL is also used to define design constraints, integrate different EDA tools, write testbenches, perform chip testing, and customize and extend tool functionality. Overall, TCL plays a critical role in streamlining the design flow and improving productivity in the VLSI industry.
+In the VLSI industry, TCL (Tool Command Language) is widely used for scripting and automation in electronic design automation (EDA) tasks. It is used for tasks such as automating design setup, simulation, synthesis, timing analysis, and verification. TCL is also used to define design constraints, integrate different EDA tools, write test benches, perform chip testing, and customize and extend tool functionality. Overall, TCL plays a critical role in streamlining the design flow and improving productivity in the VLSI industry.
 
 ## OVERVIEW OF THE PROJECT
 + Input file is .csv file that contains the following details namely Design name, paths for the library, netlist used, and output generated.
@@ -14,7 +14,7 @@ In the VLSI industry, TCL (Tool Command Language) is widely used for scripting a
 + Converted sdc format file into the corresponding .timing file
 + Created .config file and passed it to the `OpenTimer` tool and generated .results file
 + Extracted the desired contents from the .results file
-+ Tabulated the contents in the format specified.
++ Tabulated the contents in the format specified (QoR).
    
 
 ## DAY1
@@ -189,12 +189,14 @@ Clock constraints, input and output constraints from the Constraint file convert
 ![report_needed contents](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/074df556-d107-44a0-b31d-0ea5a8fc030e)
 
 
-- Tabulated the desired contents in the desired format.
+- Tabulated the desired contents in the desired format (QoR).
   
 ![final output expected](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/bb2d51f2-f765-4166-99f1-d17ae27035c1)
 
 
+#### CONCLUSION
 
+TCL programming is used for automating the process of pre-layout synthesis and timing analysis and getting the QoR.
 
 
 
