@@ -125,29 +125,75 @@ Clock constraints, input and output constraints from the Constraint file convert
 
 ## DAY5 
 + Created various procs namely my_read_lib.proc, my_read_verilog.proc, my_set_num_threads.proc, my_read_sdc.proc, my_reopenstd.proc for splitting the tasks into various small tasks and then sourcing all of them into the main tcl file for creating a config_file.
+  
+![sourcing](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/3e7f9227-e6a8-4a23-aea8-e3af5f822bc3)
 
 
 + my_read_sdc.proc takes .sdc file processes it and creates.timimg file which is used by `OpenTimer` tool.
+  
 - create_clock related lines in .sdc file converted into .timing file format
+  
+![create_clock ](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/78d63fee-2b56-4a6e-9c1e-02a7f1296e63)
+
 
 - clock_latency related lines in .sdc file converted into .timing file format
+  
+![clock_latency](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/e4975d1b-256d-4450-a450-3f027b2bcd9a)
+
 
 - clock_transition related lines in .sdc file converted into .timing file format
+  
+![clk_transition](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/de4d9420-73cf-4dd7-ad46-4c91d97e80bb)
+
 
 - input_delay related lines in .sdc file converted into .timing file format
+  
+![input_delay](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/d9f5c22b-37c2-4249-9140-567260ec2d01)
+
 
 - input_transition related lines in .sdc file converted into .timing file format
+  
+![input_transition](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/c0f66d02-7d26-4b04-9613-8caa521d454a)
+
 
 - output_delay related lines in .sdc file converted into .timing file format
+  
+![output_delay](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/8a47ff85-ab64-4d56-8524-df0139081982)
+
 
 - output_load related lines in .sdc file converted into .timing file format
+  
+![output_load](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/289b99b8-6a79-470e-a457-7aaa693bf71f)
+
 
 -Final timing file appears as follows
+
+![final_timing file](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/ee78946d-b9cb-4102-bf8d-9c4dbdd3e119)
+
 
 + The created config file is passed to the `OpenTimer` tool and generated a corresponding .result file
 
 - From the .result file extracted the desired contents via grepping.
-- Tabulated the desired contents in desired format.
+  
+![report_needed contents](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/074df556-d107-44a0-b31d-0ea5a8fc030e)
+
+
+- Tabulated the desired contents in the desired format.
+  
+![final output expected](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/bb2d51f2-f765-4166-99f1-d17ae27035c1)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
