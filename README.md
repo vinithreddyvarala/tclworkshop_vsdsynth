@@ -120,8 +120,39 @@ Clock constraints, input and output constraints from the Constraint file convert
 
 ![synthesis failed](https://github.com/vinithreddyvarala/tclworkshop_vsdsynth/assets/138814647/d6f89417-6708-4a18-8c3c-36cbdbe5fc0f)
 
++ Modified synth.v file by replacing "\\" with "" and removing lines containing "*" and named it as final.synth.v which is to be included in the my.config file
 
-+ 
+
+## DAY5 
++ Created various procs namely my_read_lib.proc, my_read_verilog.proc, my_set_num_threads.proc, my_read_sdc.proc, my_reopenstd.proc for splitting the tasks into various small tasks and then sourcing all of them into the main tcl file for creating a config_file.
+
+
++ my_read_sdc.proc takes .sdc file processes it and creates.timimg file which is used by `OpenTimer` tool.
+- create_clock related lines in .sdc file converted into .timing file format
+
+- clock_latency related lines in .sdc file converted into .timing file format
+
+- clock_transition related lines in .sdc file converted into .timing file format
+
+- input_delay related lines in .sdc file converted into .timing file format
+
+- input_transition related lines in .sdc file converted into .timing file format
+
+- output_delay related lines in .sdc file converted into .timing file format
+
+- output_load related lines in .sdc file converted into .timing file format
+
+-Final timing file appears as follows
+
++ The created config file is passed to the `OpenTimer` tool and generated a corresponding .result file
+
+- From the .result file extracted the desired contents via grepping.
+- Tabulated the desired contents in desired format.
+
+
+
+
+
 
 
  
