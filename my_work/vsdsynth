@@ -1,0 +1,38 @@
+#!/bin/tcsh -f
+echo " ................................."
+echo " ................................."
+echo " ................................."
+echo " ......... VSDSYNTH .............."
+echo " ................................."
+echo " ................................."
+echo " ................................."
+echo "<<<<<<<<< This UI takes rtl files and sdc file as input files  and generates gate level netlist using Yosys tool and timing report using Opentimer tool as outputs>>>>>>>>>>>>"
+
+if ($#argv != 1) then
+	echo "INFO:Please provide csv file"
+	exit 1
+endif  
+
+if (! -f $argv[1] || $argv[1] == "-help") then
+	if ($argv[1] == "-help") then
+		echo  USAGE: ./vsdsynth  \<csvfile\>
+		echo  csvfile has 2 columns. 1st column has headings and 2nd column has actual files needed
+                echo  \<Design name\> This is the actual design or top level module
+                echo  \<output directory\> This is where the final output files to be present namely timing report
+                echo  \<Netlist directory\> This is where all the verilog files are present
+                echo  \<Early lib path\> This is used for STA
+                echo  \<Late lib Path\> This is used for STA
+                echo       \<Constraint file\> This is used to create SDC for STA
+		exit 1
+ 
+	 else  
+		echo "Error: Please provide valid csv file. $argv[1] doesnot exist"
+                exit 1
+
+
+
+endif
+
+else 
+	tclsh vsdsynth.tcl $argv[1]
+endif

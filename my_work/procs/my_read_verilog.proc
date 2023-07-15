@@ -1,0 +1,4 @@
+proc my_read_verilog {file1} {
+	puts "set_verilog_fpath $file1 "
+}
+
